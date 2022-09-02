@@ -4,7 +4,7 @@ on:
   workflow_dispatch:    
 # Add env
 env:
-  CONTAINER_REGISTRY: handson01repo19960705.azurecr.io  # ACR のドメイン (~.azurecr.io) をこちらに設定
+  CONTAINER_REGISTRY: arc19960705ff5dcs6kavm2u.azurecr.io  # ACR のドメイン (~.azurecr.io) をこちらに設定
 jobs:
   build:
     runs-on: ubuntu-18.04
