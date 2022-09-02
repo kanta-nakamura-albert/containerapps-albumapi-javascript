@@ -8,9 +8,6 @@ env:
 jobs:
   build:
     runs-on: ubuntu-18.04
-    # Add a id-token permission
-    permissions:
-      id-token: write
     steps:
       - name: Checkout to the branch
         uses: actions/checkout@v2
@@ -45,7 +42,9 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
     needs: build
-  
+    # Add a id-token permission
+    permissions:
+      id-token: write
     steps:
       - name: Set repository name to env
         run: | 
